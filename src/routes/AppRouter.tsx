@@ -8,7 +8,7 @@ function AppRouter() {
     <BrowserRouter>    
       <Navbar />
       <Routes>
-            <Route path="/" element = { <Landing /> } />               
+            <Route path="/fobs-demo/" element = { <Landing /> } />               
       </Routes>
       <Footer/>      
     </BrowserRouter>
