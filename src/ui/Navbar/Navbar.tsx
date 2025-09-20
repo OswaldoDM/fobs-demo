@@ -22,7 +22,7 @@ function Navbar() {
     <section className="bg-black font-roboto">
       <div className='container mx-auto items-center px-4 py-3 text-white xl:px-0'>
         <div className='flex justify-between items-center'>          
-          <Link to='/fobs-demo/'><img src="/fobs-demo/fobs.svg" alt="fobs-logo" /></Link>
+          <Link to='/'><img src="/fobs.svg" alt="fobs-logo" /></Link>
           <MobileIcon mobMenu={mobMenu} toggleMenu={toggleMenu}/>
           <DesktopMenu />
         </div>       

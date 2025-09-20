@@ -14,9 +14,9 @@ interface Props {
 function LinksColumn({ title, links, hideOnMobile = false }:Props) {
   return (
     <div className={`flex flex-col items-center md:items-start gap-8 ${hideOnMobile ? 'hidden md:flex' : ''}`}>
-      <h3 className={`font-bold ${ title === 'FOBS' ? 'hidden md:block' : ''}`}>
+      <h5 className={`font-bold ${ title === 'FOBS' ? 'hidden md:block' : ''}`}>
         {title}
-      </h3>
+      </h5>
       {links.map((link) => (
         <Link
           key={link.path}

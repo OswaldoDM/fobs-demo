@@ -3,13 +3,12 @@ import Navbar from "../ui/Navbar/Navbar";
 import Landing from "../pages/Landing/Landing";
 import Footer from "../ui/Footer/Footer";
 
-
 function AppRouter() {
   return (
     <BrowserRouter>    
       <Navbar />
       <Routes>
-            <Route path="/fobs-demo/" element = { <Landing /> } />               
+            <Route path="/" element = { <Landing /> } />               
       </Routes>
       <Footer/>      
     </BrowserRouter>
