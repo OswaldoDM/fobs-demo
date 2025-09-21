@@ -10,6 +10,7 @@ function Landing() {
     <Recommended/>     
 
     {/* Trending Articles */}
+    {/* Trending Businesses */}
     </>
     
   )
