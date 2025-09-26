@@ -29,11 +29,11 @@ const businessData = [
 function Recommended() {
   return (
     <Section>    
-      <div className="flex flex-col gap-8 md:flex-row md:gap-4">
-        <div className='md:min-w-[40%] lg:min-w-[35%] xl:min-w-[25%] 2xl:min-w-[20%]'>      
-          <h4 className="font-semibold mb-6 text-center md:text-left">Popular Reviewers</h4>
+      <div className="flex flex-col gap-8 pb-12 md:pb-16 xl:flex-row xl:gap-4">
+        <div className='md:min-w-[40%] lg:min-w-[32%] xl:min-w-[25%] 2xl:min-w-[20%] sm:px-14 lg:px-20 xl:px-0'>      
+          <h4 className="font-semibold mb-6 text-center xl:text-left">Popular Reviewers</h4>
           {usersData.map((user) => (
-            <div key={user.username} className="flex gap-4 bg-[#F5F5F5] border border-[#C4C4C4] rounded-lg p-4 mb-4">
+            <div key={user.username} className="flex gap-4 bg-primary_gray border border-secondary_gray rounded-lg p-4 mb-4 ">
               <div>
                 <img src={user.pic} alt={user.username} className="w-12 h-12 rounded-full mb-2" />
               </div>
@@ -56,14 +56,15 @@ function Recommended() {
         </div>
 
         <div className='w-full'>
-          <h4 className="font-semibold mb-6 text-center md:text-center lg:text-right">
+          <h4 className="font-semibold mb-6 text-center xl:text-right">
             Recommended
-          </h4>        
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+          </h4>
+
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
             {businessData.map((business, index) => (
-              <div key={index} className='text-xs rounded-lg bg-[#F5F5F5] border border-[#C4C4C4]'>
+              <div key={index} className='text-xs rounded-lg bg-primary_gray border border-secondary_gray'>
                 <div className='mb-4 relative'>
-                  <img src={business.pic} alt={business.businessName} className='w-full' />
+                  <img src={business.pic} alt={business.businessName} className='w-full h-[240px] object-cover md:h-[300px] lg:h-[200px]' />
                   <div className='bg-[#181818] rounded py-1 px-2 text-white absolute top-1 left-1'>
                     {business.typeLocation}
                   </div>
