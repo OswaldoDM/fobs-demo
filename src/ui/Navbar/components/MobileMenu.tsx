@@ -16,7 +16,7 @@ function MobileMenu({ mobMenu, toggleMenu }:Props) {
       : "grid grid-rows-[0fr] transition-all duration-300 ease-in-out"
       }`}
     >
-      <nav className='overflow-hidden flex flex-col lg:hidden'>
+      <nav className='container mx-auto overflow-hidden flex flex-col lg:hidden'>
         {navLinks.map(({ path, title }) => (
           <NavLink
             key={path}
