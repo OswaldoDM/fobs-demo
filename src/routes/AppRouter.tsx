@@ -5,10 +5,10 @@ import Footer from "../ui/Footer/Footer";
 
 function AppRouter() {
   return (
-    <BrowserRouter>    
+    <BrowserRouter basename="/fobs-demo">    
       <Navbar />
       <Routes>
-            <Route path="/fobs-demo/" element = { <Landing /> } />               
+            <Route path="/" element = { <Landing /> } />               
       </Routes>
       <Footer/>      
     </BrowserRouter>

@@ -2,7 +2,7 @@ import Section from "../../../ui/Section"
 
 function Categories() {
   return (
-    <Section className="py-20">
+    <Section className="pt-0 xl:pt-8 pb-20">
         <h4 className="text-center font-semibold mb-10">Categories</h4>
         <div className="grid grid-cols-1 gap-4 px-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 2xl:gap-y-6">
             <div className="flex flex-col items-center gap-4 p-10 bg-primary_gray xl:py-12 rounded border border-secondary_gray hover:border-gray-400 transition duration-200 cursor-pointer">

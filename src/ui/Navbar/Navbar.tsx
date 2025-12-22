@@ -4,6 +4,7 @@ import MobileIcon from "./components/MobileIcon";
 import DesktopMenu from "./components/DesktopMenu";
 import MobileMenu from "./components/MobileMenu";
 import Section from "../Section";
+import fobsLogo from '/fobs.svg';
 
 
 export const navLinks = [    
@@ -23,7 +24,7 @@ function Navbar() {
      <> 
     <Section bg= 'black' className="py-3">
       <div className='flex justify-between items-center'>          
-        <Link to='/fobs-demo/'><img src="/fobs-demo/fobs.svg" alt="fobs-logo" /></Link>
+        <Link to='/'><img src={fobsLogo} alt="fobs-logo" /></Link>
         <MobileIcon mobMenu={mobMenu} toggleMenu={toggleMenu}/>
         <DesktopMenu />
       </div>      

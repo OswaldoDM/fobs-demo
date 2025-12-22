@@ -17,7 +17,7 @@ function ReviewCard({ author, authorImg, title, likes, description, articleImg, 
 
   return (
     <div      
-      className='flex-none w-full sm:w-[47.6%] md:w-[48%] lg:w-[31.8%] xl:w-[23.8%] 2xl:w-[24%] overflow-hidden animate-slideIn motion-reduce:animate-none border-2 border-secondary_gray rounded-lg bg-primary_gray'
+      className='flex-none w-full sm:w-[47.6%] md:w-[48%] lg:w-[31.8%] xl:w-[23.8%] 2xl:w-[24%] overflow-hidden animate-slideIn motion-reduce:animate-none border border-secondary_gray rounded-lg bg-primary_gray'
     >
       <div className='flex justify-between items-center p-2'>
         <div className='flex gap-3'>
@@ -92,7 +92,7 @@ function ReviewCard({ author, authorImg, title, likes, description, articleImg, 
         </div>
       </div>
 
-      <div className='flex flex-col justify-between gap-2 py-3 px-2 min-h-[30%] md:min-h-[33%]'>
+      <div className='flex flex-col justify-between gap-2 py-3.5 px-2 min-h-[30%] md:min-h-[33%]'>
         <div className='flex gap-2'>
           <div className='flex'>
             <img src={like3} alt='likes' className='w-4 h-4 rounded-full' />
