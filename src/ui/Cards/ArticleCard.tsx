@@ -18,8 +18,9 @@ function ArticleCard({ author, authorImg, title, likes, description, articleImg,
 
   return (
     <div      
-      className='flex-none w-full sm:w-[47.6%] md:w-[48%] lg:w-[31.8%] xl:w-[23.8%] 2xl:w-[24%] overflow-hidden animate-slideIn motion-reduce:animate-none border-2 border-primary_gray rounded-lg'
+      className='flex-none w-full sm:w-[47.6%] md:w-[48%] lg:w-[31.8%] xl:w-[23.8%] 2xl:w-[24%] overflow-hidden animate-slideIn motion-reduce:animate-none border border-secondary_gray rounded-lg'
     >
+      {/* AUTHOR */}
       <div className='flex justify-between items-center p-2'>
         <div className='flex gap-3'>
           <img
@@ -46,6 +47,7 @@ function ArticleCard({ author, authorImg, title, likes, description, articleImg,
         </div>        
       </div>
 
+      {/* IMAGE */}
       <div className='h-[300px] md:h-[240px] overflow-hidden'>
         <img
           src={articleImg}
@@ -55,6 +57,7 @@ function ArticleCard({ author, authorImg, title, likes, description, articleImg,
         />
       </div>
 
+      {/* BUTTONS */}
       <div className='flex justify-between items-baseline p-2'>
         <div className='flex gap-2'>
           <svg
@@ -91,6 +94,7 @@ function ArticleCard({ author, authorImg, title, likes, description, articleImg,
         </div>
       </div>
 
+      {/* DESCRIPTION */}
       <div className='flex flex-col justify-between gap-2 py-3 px-2 min-h-[30%] md:min-h-[33%]'>
         <div className='flex gap-2'>
           <div className='flex'>
@@ -116,6 +120,7 @@ function ArticleCard({ author, authorImg, title, likes, description, articleImg,
           <Link to='/'>READ STORY</Link>
         </div>
       </div>
+
     </div>
   );
 }
