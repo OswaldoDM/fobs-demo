@@ -1,6 +1,6 @@
-import like1 from "/like1.png";
-import like2 from "/like2.png";
-import like3 from "/like3.png";
+import like1 from "/images/likes/like1.png";
+import like2 from "/images/likes/like2.png";
+import like3 from "/images/likes/like3.png";
 
 interface Props {    
     author: string;

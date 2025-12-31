@@ -1,4 +1,4 @@
-import locationIcon from "/location-icon.svg";
+import locationIcon from "/icons/location-icon.svg";
 
 interface Props {
   cardBg?: 'gray' | 'black' ;  
