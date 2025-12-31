@@ -1,8 +1,8 @@
 import { Link } from "react-router";
-import like1 from "/like1.png";
-import like2 from "/like2.png";
-import like3 from "/like3.png";
-import share from "/share.svg";
+import like1 from "/images/likes/like1.png";
+import like2 from "/images/likes/like2.png";
+import like3 from "/images/likes/like3.png";
+import share from "/icons/share.svg";
 
 interface Props {    
     author: string;
