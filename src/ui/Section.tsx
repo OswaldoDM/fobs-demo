@@ -5,7 +5,7 @@ interface Props {
     className?: string
 }
 
-function Section({children, bg = 'white', className = ''}:Props) {   
+function Section({children, bg = 'white', className = ''}:Props) {  
 
   return (
     <section className={`${bg === 'black' ? 'bg-black text-white' : ''} `}>

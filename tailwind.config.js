@@ -25,11 +25,11 @@ export default {
             transform: 'translateX(0)',
           }
         }
-      }
-    },
-    animation: {
+      },
+      animation: {
       slideIn: 'slideIn 1s ease forwards',
     }
+    },    
   },
   plugins: [],
 }

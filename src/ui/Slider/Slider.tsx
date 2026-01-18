@@ -51,9 +51,9 @@ interface Props {
 
 function Slider({articles, businesses, reviews, cardBg, section}:Props) {
   const [visibleCards, setVisibleCards] = useState(4);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);  
   
-  // +1 to include the placeholder card with dashed border at the end
+  // +1 to include the placeholder card
   const totalCards = (articles?.length ?? businesses?.length ?? reviews?.length ?? 0) + 1;  
 
   useEffect(() => {
@@ -101,6 +101,7 @@ function Slider({articles, businesses, reviews, cardBg, section}:Props) {
           aria-label='Previous slide'
         >
           <svg
+            aria-hidden="true"
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
             viewBox='0 0 24 24'
@@ -123,6 +124,7 @@ function Slider({articles, businesses, reviews, cardBg, section}:Props) {
           aria-label='Next slide'
         >
           <svg
+            aria-hidden="true"
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
             viewBox='0 0 24 24'
@@ -157,7 +159,7 @@ function Slider({articles, businesses, reviews, cardBg, section}:Props) {
           )}
           {businesses && businesses.length > 0 && (
             <>
-              {businesses.map((item) => <BusinessCard key={item.id} {...item} cardBg={cardBg} section={section}/>)}              
+              {businesses.map((item) => <BusinessCard key={item.id} business={item} cardBg={cardBg} section={section}/>)}              
               <div className={`flex-none w-full sm:w-[47.6%] md:w-[48%] overflow-hidden border-2 border-dashed border-secondary_gray rounded-lg min-h-[400px] md:min-h-[450px] flex items-center justify-center animate-slideIn motion-reduce:animate-none
                 ${section === 'recommended' ? 'lg:w-[32%]' : 'lg:w-[31.8%] xl:w-[23.8%] 2xl:w-[24%]'}`}>
                 {section === 'recommended' ? (

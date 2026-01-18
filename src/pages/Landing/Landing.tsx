@@ -1,3 +1,4 @@
+//import Modal from "../../ui/Modal";
 import Categories from "./components/Categories";
 import Hero from "./components/Hero";
 import PopularReviews from "./components/PopularReviews";
@@ -14,6 +15,7 @@ function Landing() {
     <TrendingBusinesses />
     <PopularReviews />
     <Categories />
+    {/* <Modal /> */}
     </>
     
   )

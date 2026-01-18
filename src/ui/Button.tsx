@@ -17,7 +17,7 @@ function Button({ variant = 'primary', children, className = '', ...props }:Prop
   const combinedStyles = `${baseStyles} ${variantStyles[variant]} ${className}`;
 
   return (
-    <button className={combinedStyles} {...props}>
+    <button type="button" className={combinedStyles} {...props}>
       {children}
     </button>
   );
