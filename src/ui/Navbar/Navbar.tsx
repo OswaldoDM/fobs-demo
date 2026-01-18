@@ -6,7 +6,6 @@ import MobileMenu from "./components/MobileMenu";
 import Section from "../Section";
 import fobsLogo from '/fobs.svg';
 
-
 export const navLinks = [    
     { path: '/write-a-review', title:'Write a Review' },
     { path: '/categories', title:'Categories' },
@@ -14,7 +13,7 @@ export const navLinks = [
 ]  
 
 function Navbar() {
-  const [mobMenu, setMobMenu] = useState(false);
+  const [mobMenu, setMobMenu] = useState(false);  
   
   function toggleMenu(menuState: boolean) {
     setMobMenu(menuState)

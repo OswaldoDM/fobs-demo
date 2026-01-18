@@ -10,6 +10,7 @@ function Hero() {
           transition-all duration-200 bg-primary_gray shadow-[0px_4px_4px_rgba(0,0,0,0.25)]'
         >
           <svg
+            aria-hidden="true"
             className='mr-2 lg:w-6 lg:h-6'
             width='18px'
             height='18px'
@@ -35,7 +36,7 @@ function Hero() {
             ></path>
           </svg>
           <input
-            className='w-full h-full lg:py-1 lg:text-xl 2xl:text-2xl font-poppins bg-primary_gray focus:outline-none placeholder:text-sm placeholder:font-poppins placeholder:text-[#7A7A7A] md:placeholder:text-base lg:placeholder:text-xl 2xl:placeholder:text-2xl'
+            className='w-full h-full lg:py-1 lg:text-xl 2xl:text-2xl font-poppins bg-primary_gray focus:outline-none placeholder:text-sm placeholder:font-poppins placeholder:text-[#939393] md:placeholder:text-base lg:placeholder:text-xl 2xl:placeholder:text-2xl'
             type='text'
             placeholder='Search businesses or categories'
           />

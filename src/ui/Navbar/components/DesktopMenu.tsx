@@ -3,7 +3,7 @@ import { navLinks } from "../Navbar";
 import Button from "../../Button";
 
 
-function DesktopMenu() {  
+function DesktopMenu() {   
 
   return (
     <nav className='hidden lg:flex lg:items-center lg:gap-10'>

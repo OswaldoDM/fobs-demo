@@ -57,6 +57,7 @@ function ReviewCard({ author, authorImg, title, likes, description, articleImg, 
       <div className='flex justify-between items-baseline p-2'>
         <div className='flex gap-2'>
           <svg
+            aria-hidden="true"
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
             viewBox='0 0 24 24'
@@ -71,6 +72,7 @@ function ReviewCard({ author, authorImg, title, likes, description, articleImg, 
             />
           </svg>
           <svg
+            aria-hidden="true"
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
             viewBox='0 0 24 24'
@@ -86,7 +88,7 @@ function ReviewCard({ author, authorImg, title, likes, description, articleImg, 
           </svg>
         </div>
         <div>          
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path stroke="black" strokeWidth="1.4" strokeLinejoin="round" d="M8.19995 9.7002L0.699951 6.7002L17.2 0.700195L11.2 17.2002L8.19995 9.7002ZM8.19995 9.7002L11.95 5.9502"/>
           </svg>
         </div>
