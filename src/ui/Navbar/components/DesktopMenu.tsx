@@ -24,8 +24,8 @@ function DesktopMenu() {
           </span>
       ))}
       <div className="flex gap-4">
-        <Button variant="primary" className="w-auto hover:bg-white/10">Sign In</Button>
-        <Button variant="secondary" onClick={openModal} className="w-auto">Sign Up</Button>
+        <Button variant="primary" className=" hover:bg-white/10">Sign In</Button>
+        <Button variant="secondary" onClick={openModal}>Sign Up</Button>
       </div>
     </nav>
   );

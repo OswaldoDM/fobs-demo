@@ -50,7 +50,7 @@ function ReviewerSignUp() {
                      placeholder="Password"
                      className="border border-[#939393] rounded-[4px] py-2 px-4"
                   />
-                  <Button>Sign Up</Button>
+                  <Button className="w-full">Sign Up</Button>
                </form>
             </div>
          </div>
