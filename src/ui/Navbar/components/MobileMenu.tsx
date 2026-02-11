@@ -2,7 +2,6 @@ import { NavLink } from "react-router";
 import { navLinks } from "../Navbar";
 import Button from "../../Button";
 
-
 interface Props {
   mobMenu: boolean;
   toggleMenu: (menuState: boolean) => void;
@@ -21,14 +20,14 @@ function MobileMenu({ mobMenu, toggleMenu }:Props) {
           <NavLink
             key={path}
             to={path}
-            className={({ isActive }) => (isActive ? "font-bold" : "")}
+            className={({ isActive }) => (isActive && path !== '/fobs-for-business' ? "font-bold" : "")}
             onClick={() => toggleMenu(!mobMenu)}
           >
             <p className='px-4 py-5 text-white bg-black'>{title}</p>
           </NavLink>
         ))}
         <div className="flex flex-col gap-4 pt-4 pb-8">
-          <Button variant="primary">Sign In</Button>
+          <Button variant="primary" className="hover:bg-white/10">Sign In</Button>
           <Button variant="secondary">Sign Up</Button>
         </div>
       </nav>
