@@ -8,10 +8,10 @@ interface Props {
 
 function Button({ variant = 'primary', children, className = '', ...props }:Props){
 
-  const baseStyles = 'py-[10px] px-7 transition-colors duration-200 rounded-lg mx-4 lg:mx-0';
+  const baseStyles = 'py-[10px] px-7 w-full transition-colors duration-200 rounded-lg ';
   const variantStyles = {
-    primary: 'bg-black text-white hover:bg-white/10',
-    secondary: 'bg-white text-black hover:bg-white font-bold',
+    primary: 'bg-black text-white font-semibold',
+    secondary: 'bg-white text-black font-bold',
   };
 
   const combinedStyles = `${baseStyles} ${variantStyles[variant]} ${className}`;

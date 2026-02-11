@@ -1,15 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router";
 import MobileIcon from "./components/MobileIcon";
 import DesktopMenu from "./components/DesktopMenu";
 import MobileMenu from "./components/MobileMenu";
 import Section from "../Section";
 import fobsLogo from '/fobs.svg';
+import { Link } from "react-router";
 
 export const navLinks = [    
     { path: '/write-a-review', title:'Write a Review' },
     { path: '/categories', title:'Categories' },
     { path: '/articles', title:'Articles' },
+    { path: '/fobs-for-business', title:'FOBS for Business' },
 ]  
 
 function Navbar() {
