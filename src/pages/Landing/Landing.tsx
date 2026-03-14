@@ -1,11 +1,26 @@
-
+import Modal from "../../ui/Modal";
+import Categories from "./components/Categories";
+import Hero from "./components/Hero";
+import PopularReviews from "./components/PopularReviews";
+import Recommended from "./components/Recommended";
+import TrendingArticles from "./components/TrendingArticles";
+import TrendingBusinesses from "./components/TrendingBusinesses";
+import { useModalStore } from "../../store/useModalStore";
 
 function Landing() {
+  const isOpen = useModalStore((state) => state.isOpen);
+
   return (
-    <div className="flex flex-col items-center justify-center gap-4 py-44 lg:py-56 text-center px-3 lg:px-0">
-      <h1>Built for locals, by locals</h1>
-      <h3>Discover, review, and support family-owned businesses near you.</h3>      
-    </div>
+    <>
+    <Hero />
+    <Recommended />     
+    <TrendingArticles />
+    <TrendingBusinesses />
+    <PopularReviews />
+    <Categories />
+    {isOpen ? <Modal /> : null}
+    </>
+    
   )
 }
 

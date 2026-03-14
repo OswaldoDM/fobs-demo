@@ -18,8 +18,8 @@ export const footerLinks = {
     { path: '/contact', title: 'Contact Us' },
   ],
   social: [
-    { path: '/', title: 'Twitter (X)' },
-    { path: '/', title: 'Instagram' },
-    { path: '/', title: 'Facebook' },
+    { path: '/twitter', title: 'Twitter (X)' },
+    { path: '/instagram', title: 'Instagram' },
+    { path: '/facebook', title: 'Facebook' },
   ],
 };
