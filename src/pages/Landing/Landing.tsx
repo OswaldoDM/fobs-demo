@@ -18,7 +18,7 @@ function Landing() {
     <TrendingBusinesses />
     <PopularReviews />
     <Categories />
-    {isOpen && <Modal />}
+    {isOpen ? <Modal /> : null}
     </>
     
   )

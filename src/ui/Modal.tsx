@@ -1,22 +1,18 @@
 import { useNavigate } from "react-router";
 import { useModalStore } from "../store/useModalStore";
-import { useEffect, useState } from "react";
 
 function Modal() {
-   const [isReviewer, setIsReviewer] = useState(false);
-   const [isBusinessOwner, setIsBusinessOwner] = useState(false);
    const closeModal = useModalStore((state) => state.closeModal);
    const navigate = useNavigate();
 
-   useEffect(() => {
-     if(isReviewer) navigate("/reviewer-sign-up")  
-     if(isBusinessOwner) navigate("/business-sign-up")          
-   }, [isReviewer,isBusinessOwner])
-   
+   const handleSelect = (role: "reviewer" | "business") => {
+     closeModal();
+     navigate(role === "reviewer" ? "/reviewer-sign-up" : "/business-sign-up");
+   };
 
    return (
       <div
-         className="fixed inset-0 w-full h-full flex flex-col justify-center items-center bg-black/50 z-10 cursor-pointer"
+         className="fixed inset-0 flex flex-col justify-center items-center bg-black/50 z-10 cursor-pointer"
          onClick={closeModal}
       >
          <div
@@ -39,7 +35,7 @@ function Modal() {
                   className="appearance-none w-6 h-6 rounded-full border-2 border-[#7A7A7A] 
                   cursor-pointer transition-all duration-200 checked:bg-blue-500 checked:border-blue-500
                   checked:ring-2 checked:ring-blue-500 checked:ring-offset-2"
-                  onClick={() => setIsReviewer(true)}
+                  onClick={() => handleSelect("reviewer")}
                />
             </div>
             <div className="flex justify-between items-center border border-l-4 border-[#ABABAB] rounded-[4px] p-4">
@@ -52,7 +48,7 @@ function Modal() {
                   className="appearance-none w-6 h-6 rounded-full border-2 border-[#7A7A7A] 
                   cursor-pointer transition-all duration-200 checked:bg-blue-500 checked:border-blue-500
                   checked:ring-2 checked:ring-blue-500 checked:ring-offset-2"
-                  onClick={() => setIsBusinessOwner(true)}
+                  onClick={() => handleSelect("business")}
                />
             </div>
          </div>

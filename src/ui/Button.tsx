@@ -9,6 +9,7 @@ interface Props {
 function Button({ variant = 'primary', children, className = '', ...props }:Props){
 
   const baseStyles = 'py-[10px] px-7 transition-colors duration-200 rounded-lg ';
+
   const variantStyles = {
     primary: 'bg-black text-white font-semibold',
     secondary: 'bg-white text-black font-bold',
