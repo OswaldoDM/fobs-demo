@@ -6,8 +6,8 @@ function Modal() {
    const navigate = useNavigate();
 
    const handleSelect = (role: "reviewer" | "business") => {
-     closeModal();
-     navigate(role === "reviewer" ? "/reviewer-sign-up" : "/business-sign-up");
+      navigate(role === "reviewer" ? "/reviewer-sign-up" : "/business-sign-up");
+      //closeModal();
    };
 
    return (
