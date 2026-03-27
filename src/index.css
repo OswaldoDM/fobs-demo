@@ -18,4 +18,10 @@
     p {
       @apply font-roboto;
     }    
+    label {
+      @apply font-roboto;
+    }    
+    span {
+      @apply font-roboto;
+    }    
 }
