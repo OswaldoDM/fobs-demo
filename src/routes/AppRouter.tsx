@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route, Outlet } from "react-router";
-import Navbar from "../ui/Navbar/Navbar";
-import Landing from "../pages/Landing/Landing";
-import Footer from "../ui/Footer/Footer";
-import ReviewerSignUp from "../pages/ReviewerSignUp/ReviewerSignUp";
-import BusinessSignUp from "../pages/BusinessSignUp/BusinessSignUp";
+import Navbar from "@/ui/Navbar/Navbar";
+import Footer from "@/ui/Footer/Footer";
+import Landing from "@/pages/Landing/Landing";
+import ReviewerSignUp from "@/pages/Auth/ReviewerSignUp/ReviewerSignUp";
+import BusinessSignUp from "@/pages/Auth/BusinessSignUp/BusinessSignUp";
 
 function MainLayout() {
   return (
@@ -17,17 +17,19 @@ function MainLayout() {
 
 function AppRouter() {
   return (
-    <BrowserRouter basename="/fobs-demo">    
+    <BrowserRouter basename="/fobs-demo">
+
       <Routes>
-        {/* Rutas con Navbar y Footer */}
+        {/* Routes with Navbar and Footer */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<Landing />} />
         </Route>
 
-        {/* Rutas SIN Navbar ni Footer */}
+        {/* Routes without Navbar and Footer */}
         <Route path="/reviewer-sign-up" element={<ReviewerSignUp />} />
         <Route path="/business-sign-up" element={<BusinessSignUp />} />          
       </Routes>
+      
     </BrowserRouter>
   );
 }

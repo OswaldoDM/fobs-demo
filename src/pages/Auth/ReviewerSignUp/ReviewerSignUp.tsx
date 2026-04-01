@@ -1,10 +1,10 @@
-
 import fobsImage from "/fobs-image.png";
+import fobsWhite from "/fobs-white.png";
 import Button from "@/ui/Button";
 
 function ReviewerSignUp() {
    return (
-      <section className="flex min-h-screen px-4 xl:px-0">
+      <section className="flex min-h-screen px-4 lg:px-0">
 
          <div className="bg-black hidden lg:block lg:w-[50%] ">
             <div className="h-[92%] flex justify-center items-center">
@@ -13,17 +13,21 @@ function ReviewerSignUp() {
             <p className="text-white text-center">Built for locals, by locals</p>
          </div>
 
-         <div className="flex justify-center items-center lg:w-[50%]">
+         <div className="flex justify-center items-center w-full mb-3 lg:w-[50%]">
             <div className=" min-w-[60%]">
-               <p className='text-xs text-right mb-2 2xl:mb-6'>
-                  Already have an account? 
-                  <span className="text-blue-800 cursor-pointer ml-1">
-                     Sign In
-                  </span>
-               </p>
+               <div className="flex justify-between items-center mt-3 mb-6 xl:mb-3 2xl:mb-6">
+                  <img src={fobsWhite} alt="FOBS" className="lg:hidden" />
+                  <p className='text-xs text-right w-full'>
+                     Already have an account? 
+                     <span className="text-blue-800 cursor-pointer ml-1">
+                        Sign In
+                     </span>
+                  </p>
+               </div>
                <h4 className="font-semibold mb-3">Create a new account</h4>
                <p className="text-[#494949] mb-4 2xl:mb-6">Enter your details to sign up</p>
-               <form className="flex flex-col gap-3 2xl:gap-4 font-roboto">
+
+               <form className="flex flex-col gap-3 2xl:gap-4 font-roboto">                  
                   <label htmlFor="username">
                      Username<span className="text-red-600">*</span>
                   </label>
