@@ -1,5 +1,6 @@
 import { NavLink } from "react-router";
 import { navLinks } from "../Navbar";
+import { useModalStore } from "@/store/useModalStore";
 import Button from "../../Button";
 
 interface Props {
@@ -7,7 +8,9 @@ interface Props {
   toggleMenu: (menuState: boolean) => void;
 }
 
-function MobileMenu({ mobMenu, toggleMenu }:Props) {  
+function MobileMenu({ mobMenu, toggleMenu }:Props) {
+  const openModal = useModalStore((state) => state.openModal);
+
   return (   
     <div
       className={`absolute w-full bg-black ${mobMenu        
@@ -26,9 +29,9 @@ function MobileMenu({ mobMenu, toggleMenu }:Props) {
             <p className='px-4 py-5 text-white bg-black'>{title}</p>
           </NavLink>
         ))}
-        <div className="flex flex-col gap-4 pt-4 pb-8">
+        <div className="flex flex-col gap-4 pt-4 pb-8 px-4">
           <Button variant="primary" className="hover:bg-white/10">Sign In</Button>
-          <Button variant="secondary">Sign Up</Button>
+          <Button variant="secondary" onClick={() => {openModal(); toggleMenu(!mobMenu)}}>Sign Up</Button>
         </div>
       </nav>
     </div>    
