@@ -1,8 +1,29 @@
 import fobsImage from "/fobs-image.png";
 import fobsWhite from "/fobs-white.png";
 import Button from "@/ui/Button";
+import { useUserStore } from "@/store/useUserStore";
+import { useNavigate } from "react-router";
 
 function ReviewerSignUp() {
+   const { user, updateUser } = useUserStore();
+   const navigate = useNavigate();
+
+   const handleChange = (e: InputChange) => {
+      updateUser({
+         [e.target.name]: e.target.value,
+      });
+   };
+
+   const handleSubmit = (e: React.FormEvent) => {
+      e.preventDefault();
+      if(user.username !== 'John Doe' 
+         || user.email !== 'johndoe@gmail.com' 
+         || user.password !== 'z82o18@**') {
+         return;
+      }       
+      navigate('/reviewer-profile');     
+   };
+
    return (
       <section className="flex min-h-screen px-4 lg:px-0">
 
@@ -14,7 +35,7 @@ function ReviewerSignUp() {
          </div>
 
          <div className="flex justify-center items-center w-full mb-3 lg:w-[50%]">
-            <div className=" min-w-[60%]">
+            <div className=" sm:min-w-[80%] lg:min-w-[60%]">
                <div className="flex justify-between items-center mt-3 mb-6 xl:mb-3 2xl:mb-6">
                   <img src={fobsWhite} alt="FOBS" className="lg:hidden" />
                   <p className='text-xs text-right w-full'>
@@ -27,7 +48,7 @@ function ReviewerSignUp() {
                <h4 className="font-semibold mb-3">Create a new account</h4>
                <p className="text-[#494949] mb-4 2xl:mb-6">Enter your details to sign up</p>
 
-               <form className="flex flex-col gap-3 2xl:gap-4 font-roboto">                  
+               <form onSubmit={handleSubmit} className="flex flex-col gap-3 2xl:gap-4 font-roboto">                  
                   <label htmlFor="username">
                      Username<span className="text-red-600">*</span>
                   </label>
@@ -39,6 +60,8 @@ function ReviewerSignUp() {
                      className="border border-[#939393] rounded-[4px] py-2 px-4"
                      required
                      autoComplete="on"
+                     value={user.username}
+                     onChange={handleChange}
                   />
 
                   <label htmlFor="username">
@@ -51,6 +74,8 @@ function ReviewerSignUp() {
                      placeholder="Email"
                      autoComplete="on"
                      className="border border-[#939393] rounded-[4px] py-2 px-4"
+                     value={user.email}
+                     onChange={handleChange}
                   />
 
                   <label htmlFor="username">
@@ -62,10 +87,12 @@ function ReviewerSignUp() {
                      id="password"
                      placeholder="Password"
                      className="border border-[#939393] rounded-[4px] py-2 px-4"
+                     value={user.password}
+                     onChange={handleChange}
                   />
-                  <Button className="w-full font-roboto py-3">SIGN UP</Button>
+                  <Button type="submit" className="w-full font-roboto py-3">SIGN UP</Button>
                   <div className="flex items-center gap-2">
-                     <input type="checkbox" name="terms" id="terms" className="w-4 h-4" />
+                     <input defaultChecked type="checkbox" name="terms" id="terms" className="w-4 h-4" />
                      <p className="text-sm">
                         I agree to FOBS <span className="text-blue-800 cursor-pointer">Terms of Service</span> and acknowledge FOBS <span className="text-blue-800 cursor-pointer">Privacy Policy</span>
                      </p>
